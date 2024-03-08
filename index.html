@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="icon" href="logo rpl 2.png">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>KALKULATOR</title>
+        <div class="container">
+            <fieldset id="container"> 
+                <body>
+                    <h2>Kalkulator</h2>
+                    <input type="text" id="display" readonly><br>
+                    <button onclick="addToDisplay('1')" input class="button digit" type="button">1</button>
+                    <button onclick="addToDisplay('2')" input class="button digit" type="button">2</button>
+                    <button onclick="addToDisplay('3')" input class="button digit" type="button">3</button>
+                    <button onclick="addToDisplay('+')" input class="button digit" type="button">+</button>
+                    <br>
+                    <button onclick="addToDisplay('4')" input class="button digit" type="button">4</button>
+                    <button onclick="addToDisplay('5')" input class="button digit" type="button">5</button>
+                    <button onclick="addToDisplay('6')" input class="button digit" type="button">6</button>
+                    <button onclick="addToDisplay('-')" input class="button digit" type="button">-</button>
+                    <br>
+                    <button onclick="addToDisplay('7')" input class="button digit" type="button">7</button>
+                    <button onclick="addToDisplay('8')" input class="button digit" type="button">8</button>
+                    <button onclick="addToDisplay('9')" input class="button digit" type="button">9</button>
+                    <button onclick="addToDisplay('*')" input class="button digit" type="button">*</button>
+                    <br>
+                    <button onclick="addToDisplay('.')" input class="button digit" type="button">.</button>
+                    <button onclick="addToDisplay('0')" input class="button digit" type="button">0</button>
+                    <button onclick="calculate()" input class="button digit" type="button">=</button>
+                    <button onclick="addToDisplay('/')" input class="button digit" type="button">/</button>
+                    <br>
+                    <button onclick="cleardisplay()" id="btnC" input class="button digit" type="button">C</button>
+                    <br>
+
+                    <script>
+                        function addToDisplay (value){
+                            document.getElementById ('display').value += value;
+                        }
+                        function cleardisplay(){
+                            document.getElementById ('display').value ='';
+                        }
+                        function calculate(){
+                            var display =document.getElementById('display').value;
+                            var result = eval (display);
+                            result= parseFloat (result.toFixed(5));
+                            document.getElementById('display').value =result;                   
+                        }    
+                    </script>
+                </body>
+            </fieldset>
+        </div>
+    </head>
+</html>
